@@ -1,0 +1,22 @@
+en:
+  date:
+     formats:
+       default: "%d/%m/%Y"
+  time:
+     formats:
+       default: "%d/%m/%Y @ %I:%M %p"
+  layouts:
+    appointment:
+      payroll:  "Payroll"
+      phone:    "Phone"
+      email:    "Email"
+  appointments:
+    index:
+      title: "My Reminders"
+      datetime: "Time"
+      message: "Message"
+      created_at: "Created At"
+      actions: ""
+      new: "New Reminder"
+    show:
+      title: "Reminder"

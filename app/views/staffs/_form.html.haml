@@ -1,0 +1,8 @@
+= simple_form_for @staff, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name
+  = f.input :payroll_number
+  = f.input :phone
+  = f.input :email
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), staffs_path, :class => 'btn'

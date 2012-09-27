@@ -1,0 +1,14 @@
+#appointments
+  %h2#month
+    = link_to "<", date: @date.prev_month
+    = @date.strftime("%B %Y")
+    = link_to ">", date: @date.next_month
+  = calendar @date do |date|
+    = date.day
+    - if @appointments_by_date[date]
+      %ul
+        - @appointments_by_date[date].each do |appointment|
+          %li= link_to appointment.summary, appointment_path(@staff_name, appointment)
+%br
+%p
+  = link_to t('.new', :default => t("helpers.links.new")), new_appointment_path(@staff_name), :class => 'btn btn-primary'

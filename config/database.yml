@@ -1,0 +1,17 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: reminder_development
+  pool: 5
+  username: root
+  password: 
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: reminder_test
+  pool: 5
+  username: root
+  password: 

@@ -1,0 +1,9 @@
+Reminder:
+
+Note: this app does not have any Authorization, Authentication features.
+
+How to use:
+1- go to the root of the app and create a staff. ex. ( localhost:3000 )
+2- A url with the name of the created staff will be available for them to manage their reminders. ex. (localhost:3000/sam)
+3- staff can add a new reminder using the New Reminder button and can manage their added reminders using the calendar.
+4- the right, left arrows in calendar help navingating to next, previous months.

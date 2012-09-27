@@ -1,0 +1,27 @@
+- model_class = Staff
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:payroll_number)
+      %th= model_class.human_attribute_name(:phone)
+      %th= model_class.human_attribute_name(:email)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @staffs.each do |staff|
+      %tr
+        %td= link_to staff.id, staff_path(staff)
+        %td= staff.name
+        %td= staff.payroll_number
+        %td= staff.phone
+        %td= staff.email
+        %td=l staff.created_at
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_staff_path(staff), :class => 'btn btn-mini'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), staff_path(staff), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_staff_path, :class => 'btn btn-primary'
